@@ -12,5 +12,9 @@ class State(models.Model):
     # Фото для превью - необязательно для заполнения, загружается в папку media/states
     photo = models.ImageField(upload_to='states')
 
+    # Отображаемое название группы пользователей в админке
+    class Meta:
+        verbose_name_plural = 'Статьи'
+
     def __str__(self):
         return self.title

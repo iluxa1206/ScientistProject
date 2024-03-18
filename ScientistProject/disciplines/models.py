@@ -7,6 +7,10 @@ class Disciplines(models.Model):
     # Описание - необязательна для заполнения
     description = models.TextField(blank=True)
 
+    # Отображаемое название группы пользователей в админке
+    class Meta:
+        verbose_name_plural = 'Дисциплины'
+
     def __str__(self):
         return self.name
 
